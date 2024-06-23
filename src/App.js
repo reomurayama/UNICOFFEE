@@ -1,7 +1,9 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <header className="App-header">
@@ -15,10 +17,21 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Reactaaa
+          Learn React
         </a>
       </header>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter basename="/UNICOFFEE">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* 他のルートもここに追加可能 */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
