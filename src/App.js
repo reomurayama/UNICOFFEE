@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import logo from './logo.svg';
 import './App.css';
 
@@ -27,10 +29,12 @@ function Home() {
 function App() {
   return (
     <BrowserRouter basename="/UNICOFFEE">
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* 他のルートもここに追加可能 */}
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
